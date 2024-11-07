@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=900, initial-scale=1.0" />
+    <title>LootBag banner</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .bannerBox {
+        position: relative;
+        width: 900px;
+        overflow: hidden;
+        height: 1200px;
+        background-image: url(./images/bg.png);
+      }
+
+      .bag {
+        position: absolute;
+        left: 96px;
+        top: 475px;
+        z-index: 1;
+      }
+
+      .info-icon60l-core {
+        position: absolute;
+        left: 575.34px;
+        top: 382.34px;
+        transform: scale(0);
+        opacity: 0;
+        animation: scaleAnimation 1s ease-in-out forwards;
+        animation-delay: 1s;
+      }
+
+      .info-icon60l-bg {
+        position: absolute;
+        left: 563.47px;
+        top: 370.47px;
+        transform: scale(0);
+        opacity: 0;
+        animation: scaleAnimation 1s ease-in-out forwards;
+      }
+
+      .litters-text {
+        position: absolute;
+        left: 610px;
+        top: 438px;
+        animation: opacityAnimation 1s ease-in-out forwards;
+      }
+
+      .logo {
+        position: absolute;
+        top: 39px;
+        left: 39px;
+        animation: opacityAnimation 1s ease-in-out forwards;
+      }
+
+      .text-image1 {
+        position: absolute;
+        top: 180px;
+        left: 42px;
+        opacity: 0;
+        animation: slideInFromLeft 1s ease-out forwards;
+        animation-delay: 0.5s;
+      }
+
+      .text-image2 {
+        position: absolute;
+        opacity: 0;
+        top: 234px;
+        left: 147px;
+        animation: slideInFromLeft 1s ease-out forwards;
+        animation-delay: 1.5s;
+      }
+
+      .vetka-right-top {
+        position: absolute;
+        left: 462px;
+        top: -242px;
+        transform-origin: right center;
+        opacity: 0;
+        animation: vetkaAnimation 1s ease forwards,
+          vetkaAnimationRotate 2s ease-in-out infinite;
+      }
+
+      .vetka-left-mid {
+        position: absolute;
+        top: 233px;
+        transform-origin: left top;
+        left: -290px;
+        animation: vetkaAnimation 1s ease forwards,
+          vetkaAnimationRotate 2s ease-in-out infinite;
+      }
+
+      .vetka-left-bot {
+        position: absolute;
+        top: 899px;
+        left: -103px;
+        transform-origin: left bottom;
+        animation: vetkaAnimation 1s ease forwards,
+          vetkaAnimationRotate 2s ease-in-out infinite;
+      }
+
+      .sticker {
+        position: absolute;
+        top: 992px;
+        transform: scale(1.5);
+        left: 681px;
+        animation: reverseScale 1s ease forwards;
+      }
+
+      @keyframes reverseScale {
+        from {
+          transform: scale(1.5);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes vetkaAnimation {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes vetkaAnimationRotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-100vw);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes opacityAnimation {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes scaleAnimation {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bannerBox">
+      <img src="./images/bag.png" class="bag" />
+      <img src="./images/info-icon60l-bg.png" class="info-icon60l-bg" />
+      <img src="./images/info-icon60l-core.png" class="info-icon60l-core" />
+      <img src="./images/60litters-text.png" class="litters-text" />
+      <img src="./images/Logo.png" class="logo" />
+      <img src="./images/textImage1.png" class="text-image1" />
+      <img src="./images/textImage2.png" class="text-image2" />
+      <img src="./images/vetka-rigth-top.png" class="vetka-right-top" />
+      <img src="./images/vetka-left-mid.png" class="vetka-left-mid" />
+      <img src="./images/vetka-left-bot.png" class="vetka-left-bot" />
+      <img src="./images/logo-bot-circle.png" class="sticker" />
+    </div>
+  </body>
+</html>
